@@ -2,7 +2,7 @@ var reg = /(localhost)|(127\.0\.0\.1)/g;
 var body = document.querySelector('body');
 var script = document.createElement('script');
 var ifDev = reg.test(window.location.href);
-ifDev = true;
+ifDev = false;
 if(ifDev === true) {
     var scriptCfg = document.createElement('script');
     scriptCfg.src = "./scripts/requirejs.config.js";
