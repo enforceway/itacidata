@@ -5,10 +5,15 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="X-UA-Compatible" content="chrome=1">
         <link rel="icon" type="image/x-icon" href="/favicon.png">
-        <script src="../src/node_modules/requirejs/require.js"></script>
+        <script src="../../node_modules/vue/dist/vue.js"></script>
+        <script src="../../node_modules/requirejs/require.js"></script>
     </head>
     <body>
-        <div id="name-container"></div>
+        <div id="name-container">
+            <aci-search-range></aci-search-range>
+            <aci-date-picker></aci-date-picker>
+            <aci-echart-bid></aci-echart-bid>
+        </div>
         <script src="./rootjs.js"></script>
     </body>
 </html>
