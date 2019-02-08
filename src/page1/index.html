@@ -10,9 +10,17 @@
     </head>
     <body>
         <div id="name-container">
-            <aci-search-range></aci-search-range>
-            <aci-date-picker></aci-date-picker>
-            <aci-echart-bid></aci-echart-bid>
+            <section class="s1">
+                <h1>今日分炸鸡</h1>
+            </section>
+            <section class="s2 clearfix">
+                <div class="echart-jar">
+                    <aci-echart-bid :option="cfg4Container" ></aci-echart-bid>
+                </div>
+                <div class="echart-jar">
+                    <aci-echart-bid :option="cfg4Container" ></aci-echart-bid>
+                </div>
+            </section>
         </div>
         <script src="./rootjs.js"></script>
     </body>
