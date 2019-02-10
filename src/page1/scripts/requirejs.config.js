@@ -4,6 +4,7 @@ require.config({
         'aci-date-picker': '../vcomponents/aci-date-picker',
         'aci-echart-bid': '../vcomponents/aci-echart-bid',
         'aci-search-range': '../vcomponents/aci-search-range',
+        'aci-echart-richlegend': '../vcomponents/aci-echart-richlegend',
     },
     map: {
         '*': {
