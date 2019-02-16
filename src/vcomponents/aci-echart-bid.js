@@ -53,15 +53,18 @@ define([
         },
         watch: {
             'option': {
-                deep: true,
-                handler: debounce(function() {
-                    console.log(this.einstance);
-                    // this.einstance.setOption();
+                // deep: true,
+                handler: debounce(function(nValue, oValue) {
+                    this.option.update = false;
+                    this.einstance.setOption(nValue);
                 }, 300)
             },
             'option.update': function(nValue, oValue) {
-
-                
+                if(nValue.update == false) {
+                    return;
+                }
+                this.option.update = false;
+                this.einstance.setOption(nValue);
             }
         }
     });

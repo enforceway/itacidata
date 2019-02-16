@@ -4,10 +4,10 @@ define([
     Vue.component('aci-echart-richlegend', {
         template: '<div class="aci-echart-richlegend">'
         + '<aci-echart-bid :option="option" :ginstance="instCallback"></aci-echart-bid>'
-        + '<div class="richlegend">'
-        + '<ul><li v-for="(tmp, index) in legend.data" v-on:click="legendSelect(tmp)">'
-+ '<label><span v-html="tmp.name"></span><span v-html="tmp.total"></span><span v-bind:value="(tmp.total / legend.sum)|toSumOdds"></span></label>'
-        + '</li></ul>'
+        + '<div class="aci-rich-legend">'
+        + '<ol><li v-for="(tmp, index) in legend.data" v-on:click="legendSelect(tmp)">'
++ '<span v-html="tmp.name"></span><span v-html="tmp.total"></span><span v-bind:value="(tmp.total / legend.sum)|toSumOdds"></span>'
+        + '</li></ol>'
         + '</div>'
         + '</div>',
         props: ['option'],
@@ -17,10 +17,11 @@ define([
                 instCallback: null,
                 instance: null,
                 styleTmpl: `.aci-echart-richlegend {height: 100%;} 
-                            .aci-echart-richlegend .aci-echart-bid {float: left; width: 80%;}
-                            .aci-echart-richlegend .richlegend {float: left; width: 20%;}
-                            .aci-echart-richlegend .richlegend ul {list-style: none;}
-                            .aci-echart-richlegend .richlegend li label {cursor: pointer;}`
+                            .aci-echart-richlegend .aci-echart-bid {float: left; width: 65%;}
+                            .aci-echart-richlegend .aci-rich-legend {float: left; width: 35%; height: 100%;}
+                            .aci-echart-richlegend .aci-rich-legend ol {list-style: none; display: inline-block; vertical-align: middle;}
+                            .aci-echart-richlegend .aci-rich-legend li {line-height: normal;}
+                            .aci-echart-richlegend .aci-rich-legend li label {cursor: pointer;}`
             };
         },
         filters: {
@@ -31,7 +32,6 @@ define([
         },
         methods: {
             legendSelect: function(legendItem) {
-                debugger;
                 this.instance.dispatchAction({
                     type: 'legendToggleSelect',
                     name: legendItem.name

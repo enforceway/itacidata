@@ -1,12 +1,20 @@
-.s2 {
-    background-color: oldlace;
+.s1 {
+    background-color: #e6f6fd;
 }
-.echart-jar {
+.s2 {
+    margin-top: 1vmin;
+}
+.s2 .echart-jar {
     float: left;
 }
 .s2 .echart-jar {
     height: 40vmin;
-    width: 50%;
+    line-height: 40vmin;
+    width: calc(50% - 0.5vmin);
+    background-color: #e6f6fd;
+}
+.s2 .echart-jar:last-child {
+    margin-left: 1vmin;
 }
 .clearfix:after {
     content: '';
