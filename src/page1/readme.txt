@@ -1,0 +1,1 @@
+page1页面集成了基础组件aci-echart-bid和aci-echart-richlegend，显示图标样式。用于创建富文本图例的echart图表.
